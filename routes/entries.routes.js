@@ -1,0 +1,14 @@
+const express = require('express');
+const entriesController = require("../controllers/entries.controller");
+const router = express.Router();
+
+router.get('/', entriesController.getEntries);
+
+router.post('/', entriesController.createEntry);
+
+router.put('/', entriesController.updateEntry);
+
+// router.delete("/:title", entriesController.deleteEntry);
+router.delete("/", entriesController.deleteEntry);
+
+module.exports = router;
