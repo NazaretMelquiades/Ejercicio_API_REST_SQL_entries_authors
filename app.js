@@ -11,9 +11,11 @@ app.use(express.json());
 
 // Rutas
 const entriesRoutes = require("./routes/entries.routes");
+const authorRoutes = require("./routes/authors.routes")
 
 // Habilitar 
 app.use('/api/entries', entriesRoutes);
+app.use('/api/authors', authorRoutes);
 
 app.listen(port, () => {
     console.log(
